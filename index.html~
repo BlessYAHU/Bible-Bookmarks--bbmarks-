@@ -1,0 +1,15 @@
+<html>
+	<head>
+        <style type="text/css" rel="stylesheet">
+            .error {border: 2px solid red;}
+        </style>
+    </head>
+	<body>
+		<div id="nav"> </div>
+		<div id="bookmark-list">
+            <div class="add">+</div>
+		</div>		
+
+		<script data-main="app/infrastructure/bbmarks.js" src="app/lib/require.js"></script>
+	</body>
+</html>

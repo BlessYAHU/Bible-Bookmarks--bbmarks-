@@ -1,0 +1,53 @@
+<html>
+	<head>
+        <style type="text/css" rel="stylesheet">
+
+            .error {border: 2px solid #ff0000;}
+            .nav {border:  2px solid blue;width:200px;float:left;height:100%;}
+            .body {border: 1px solid;margin-left: 10px;float:left;min-height:100%;height:auto;width:60%;}
+            form label {display: block;}
+            input, textarea {
+                height: 30px;
+                box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+                -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+                -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+                 background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+                background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+            }
+            .body {padding:  5px;}
+            textarea {
+                height: 100px;
+                width:400px;
+                display:block;
+                background: -webkit-gradient(linear, left top, left 50%, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+                background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 50px);
+            }
+            input[type="text"], textarea {
+                border: 0;
+            }
+            .body li {width:300px; list-style: none;border-bottom: 1px dashed;}
+            .body li:hover {background-color: #EEE;}
+            .remove {float:right;}
+            .remove:hover {border:  1px solid #ff9999;}
+            dt {font-style: italic;}
+            dd {margin: 0;}
+            .hide{display: none;}
+        </style>
+    </head>
+	<body >
+		<div class="nav"> </div>
+		<div class="body list">
+            <span class="add-bookmark"></span>
+            <div class="plus">+</div>
+            <ul class="bookmark-list">
+                
+            </ul>
+
+		</div>
+		
+		
+		
+		<script data-main="app/infrastructure/bbmarks.js" src="app/lib/require.js"></script>
+		
+	</body>
+</html>
