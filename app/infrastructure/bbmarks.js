@@ -4,14 +4,14 @@ require(["app/lib/underscore.js","app/lib/zepto.js"],  function() {
         require(["app/lib/backbone.localStorage.js"], function() {
             require(["app/routers/bookmark.router.js",
                     "app/views/bookmark.navmenu.View.js",
-                    "text!/samples/bbmarks/app/templates/nav.template.html",
-                    "text!/samples/bbmarks/app/templates/bookmarkItem.template.html",
+                    "text!../templates/nav.template.html",
+                    "text!../templates/bookmarkItem.template.html",
                     "app/views/bookmark.List.View.js",
                     "app/views/bookmark.Item.View.js",
                     "app/collections/bookmark.Collection.js",
                     "app/models/bookmark.Model.js",
-                    "text!/samples/bbmarks/app/templates/addBookmark.template.html",
-                    "text!/samples/bbmarks/app/templates/editBookmark.template.html",
+                    "text!../templates/addBookmark.template.html",
+                    "text!../templates/editBookmark.template.html",
                     "app/views/bookmark.Edit.View.js",
                     "app/views/bookmark.Add.View.js"],
                 function(rtr,vw,navTmpl,itmTmpl,lVw,iVw,bCol,bMod,addTmpl,editTmpl) {
