@@ -6,7 +6,7 @@ bbmarks.Views.NavMenu = Backbone.View.extend({
     
     render: function( event ){
         var compiled_template = _.template( this.template);
-        this.el.html( compiled_template() );
+        this.$el.html( compiled_template() );
         return this; //recommended as this enables calls to be chained.
     },
     events: {

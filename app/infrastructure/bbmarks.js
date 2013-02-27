@@ -1,6 +1,11 @@
 
-require(["app/lib/underscore.js","app/lib/zepto.js"],  function() {
-	require(["app/infrastructure/bookmark.namespace.js","app/lib/backbone.js"], function() {
+require({'paths': {
+    'underscore': "/app/lib/lodash",
+    'backbone' : "/app/lib/backbone"
+  }
+},
+['underscore',"app/lib/zepto.js"],  function() {
+	require(["app/infrastructure/bookmark.namespace.js",'backbone'], function() {
         require(["app/lib/backbone.localStorage.js"], function() {
             require(["app/routers/bookmark.router.js",
                     "app/views/bookmark.navmenu.View.js",
@@ -29,11 +34,9 @@ require(["app/lib/underscore.js","app/lib/zepto.js"],  function() {
 
                         require.ready(function() {
                             itms = new bbmarks.Collection.BookmarkCollection();
-                            myBookmarkController =  new bbmarks.Routers.BookmarkController;
+                            myBookmarkController =  new bbmarks.Routers.BookmarkController(itms);
                             Backbone.history.start();
                             //parent.document.getElementsByTagName('iframe')[0].style.height = document.height + 'px';
-
-
 
 		                });
 	            });

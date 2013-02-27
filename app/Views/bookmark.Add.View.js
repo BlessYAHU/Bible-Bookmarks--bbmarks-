@@ -5,11 +5,12 @@ bbmarks.Views.Add = Backbone.View.extend({
     },
     render: function() {
         var compiled_template = _.template(this.template);
-        this.el.html(compiled_template());
+        this.$el.html(compiled_template());
         return this; //recommended as this enables calls to be chained.
     },
     events: {
-        'submit .add-bookmark form':  'add'
+        'submit .add-bookmark form':  'add',
+        'click .add-bookmark' : 'AddBookMark'
     },
     add: function(evt) {
         evt.stopPropagation();
@@ -21,6 +22,11 @@ bbmarks.Views.Add = Backbone.View.extend({
     },
     reset: function(evt) {
         //executed when an element with class "go" has been clicked.
+    },
+    AddBookMark : function(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        console.log('added bookmark');
     }
     //etc
 });

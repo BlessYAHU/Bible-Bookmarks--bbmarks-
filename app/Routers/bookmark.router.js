@@ -1,6 +1,9 @@
 bbmarks.Routers.BookmarkController = Backbone.Router.extend({
   //  navView : {},
-    initialize : function() {
+    items : [],
+    initialize : function(ims) {
+        items = ims;
+        console.log('rebel ims: ' + ims);
     },
 	/* define the route and function maps for this controller */
     routes:{
@@ -48,7 +51,7 @@ bbmarks.Routers.BookmarkController = Backbone.Router.extend({
            this.navView.render();
 
 
-           this.lstView = new bbmarks.Views.List({collection: itms});
+           this.lstView = new bbmarks.Views.List({collection: items});
            this.lstView.render();
             this.addView = new bbmarks.Views.Add();
             this.addView.render();
