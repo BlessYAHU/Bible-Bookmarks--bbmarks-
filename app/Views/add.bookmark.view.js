@@ -5,6 +5,7 @@ bbmarks.Views.AddBookMark = Backbone.View.extend({
         this.$el.html(compiled_template());
         return this; //recommended as this enables calls to be chained.
     },
+    // This is a new comment
     events: {
         'click .reset': 'reset',
         'click .add-bookmark' : 'AddBookMark'
